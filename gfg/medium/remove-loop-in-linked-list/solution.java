@@ -20,8 +20,10 @@ class Solution {
                 break;
             }
         }
+        
         // if there is no cycle.
         if(slow != head) return;
+        
         // handling last node connected to first node.
         Node prev = null;
         if(fast == head){
@@ -41,7 +43,7 @@ class Solution {
             prev = fast;
             fast = fast.next;
         }
-        if(prev != null)
-            prev.next = null;
+        prev.next = null;
+        return;
     }
 }
