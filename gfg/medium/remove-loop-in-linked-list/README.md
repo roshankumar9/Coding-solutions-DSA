@@ -11,7 +11,7 @@ _Description not available._
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-07T04:37:49.742Z  
+**Submitted:** 2026-10-07T04:40:05.856Z  
 
 ```java
 /* Structure of Linked List Node
@@ -36,8 +36,10 @@ class Solution {
                 break;
             }
         }
+        
         // if there is no cycle.
         if(slow != head) return;
+        
         // handling last node connected to first node.
         Node prev = null;
         if(fast == head){
@@ -57,8 +59,8 @@ class Solution {
             prev = fast;
             fast = fast.next;
         }
-        if(prev != null)
-            prev.next = null;
+        prev.next = null;
+        return;
     }
 }
 ```
