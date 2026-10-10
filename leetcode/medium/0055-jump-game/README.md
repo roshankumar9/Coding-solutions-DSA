@@ -40,7 +40,7 @@ Explanation: You will always arrive at index 3 no matter what. Its maximum jump 
 **Language:** Java  
 **Runtime:** 0 ms  
 **Memory:** 42.8 MB  
-**Submitted:** 2026-10-10T17:05:33.662Z  
+**Submitted:** 2026-10-10T17:05:39.974Z  
 
 ```java
 class Solution {
