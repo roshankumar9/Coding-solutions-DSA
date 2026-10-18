@@ -40,9 +40,9 @@ Output: [2,3,6,7,1,5,4]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 0 ms  
-**Memory:** 41.9 MB  
-**Submitted:** 2026-10-18T18:17:42.944Z  
+**Runtime:** 0 ms (beats 100.00%)  
+**Memory:** 46 MB (beats 91.85%)  
+**Submitted:** 2026-10-18T18:18:53.052Z  
 
 ```java
 /**
