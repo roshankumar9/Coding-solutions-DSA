@@ -48,7 +48,7 @@ class Solution {
                 if(res == null)
                     res = right;
                     
-                if(left == null) break;
+                if(left == null) break; // if LL exist k size group without remaining less than k.
             } else {
                 int count = 1;
                 right = left;
