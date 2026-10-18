@@ -29,7 +29,7 @@ Explanation: Linked List is reversed in a group of size k = 4.
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-18T19:54:24.172Z  
+**Submitted:** 2026-10-18T19:58:23.327Z  
 
 ```java
 /* Structure of linked list Node
@@ -82,7 +82,7 @@ class Solution {
                 if(res == null)
                     res = right;
                     
-                if(left == null) break;
+                if(left == null) break; // if LL exist k size group without remaining less than k.
             } else {
                 int count = 1;
                 right = left;
