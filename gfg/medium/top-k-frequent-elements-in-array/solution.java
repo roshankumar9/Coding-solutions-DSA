@@ -29,11 +29,11 @@ class Solution {
                 minHeap.poll();
             }
         }
+        
         ArrayList<Integer> res = new ArrayList<>();
         while(!minHeap.isEmpty()){
-            res.add(minHeap.poll().second);
+            res.add(0, minHeap.poll().second);
         }
-        Collections.reverse(res);
         return res;
     }
 }
