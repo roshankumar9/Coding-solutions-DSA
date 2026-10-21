@@ -32,7 +32,7 @@ Explanation: Frequency of 5 is 3, frequency of 11 is 2, frequency of 7 is 2, fre
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-21T14:54:33.872Z  
+**Submitted:** 2026-10-21T14:58:10.983Z  
 
 ```java
 class Pair {
@@ -66,11 +66,11 @@ class Solution {
                 minHeap.poll();
             }
         }
+        
         ArrayList<Integer> res = new ArrayList<>();
         while(!minHeap.isEmpty()){
-            res.add(minHeap.poll().second);
+            res.add(0, minHeap.poll().second);
         }
-        Collections.reverse(res);
         return res;
     }
 }
