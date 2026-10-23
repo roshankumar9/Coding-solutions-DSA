@@ -25,7 +25,14 @@ class Solution {
             String sender = e.getKey();
             int msgCount = e.getValue();
             Pair pair = new Pair(msgCount, sender);
-            maxHeap.add(pair);
+            if(maxHeap.isEmpty() || maxHeap.peek().count == msgCount){
+                maxHeap.add(pair);
+                continue;
+            }
+            if(maxHeap.peek().count < msgCount){
+                maxHeap.poll();
+                maxHeap.add(pair);
+            }
         }
         return maxHeap.peek().name;
     }
