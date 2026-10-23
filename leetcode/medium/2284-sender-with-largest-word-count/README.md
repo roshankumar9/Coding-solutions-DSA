@@ -57,9 +57,9 @@ Since there is a tie for the largest word count, we return the sender with the l
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2 ms  
-**Memory:** 41.7 MB  
-**Submitted:** 2026-10-23T05:57:22.660Z  
+**Runtime:** 138 ms (beats 6.55%)  
+**Memory:** 65.4 MB (beats 5.68%)  
+**Submitted:** 2026-10-23T05:57:48.475Z  
 
 ```java
 class Pair{
