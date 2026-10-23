@@ -57,9 +57,9 @@ Since there is a tie for the largest word count, we return the sender with the l
 ## Solution
 
 **Language:** Java  
-**Runtime:** 138 ms (beats 6.55%)  
-**Memory:** 65.4 MB (beats 5.68%)  
-**Submitted:** 2026-10-23T05:57:48.475Z  
+**Runtime:** 150 ms (beats 5.24%)  
+**Memory:** 64.7 MB (beats 10.92%)  
+**Submitted:** 2026-10-23T06:07:04.273Z  
 
 ```java
 class Pair{
@@ -76,17 +76,15 @@ class Solution {
         int n = senders.length;
         for(int i = 0; i < n; i++){
             String sender = senders[i];
-            int msgCount = 0;
-            String[] msg = messages[i].split("\\s+");
-            for(int j = 0; j < msg.length; j++){
-                msgCount++;
-            }
+            int msgCount = messages[i].split("\\s+").length;
             map.put(sender, map.getOrDefault(sender, 0) + msgCount);
         }
+        
         // max heap.
         PriorityQueue<Pair> maxHeap = new PriorityQueue<>((a, b) ->
             a.count != b.count ? b.count - a.count : b.name.compareTo(a.name)
         );
+
         for(Map.Entry<String, Integer> e : map.entrySet()){
             String sender = e.getKey();
             int msgCount = e.getValue();
