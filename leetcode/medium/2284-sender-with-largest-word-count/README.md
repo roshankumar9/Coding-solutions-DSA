@@ -57,9 +57,9 @@ Since there is a tie for the largest word count, we return the sender with the l
 ## Solution
 
 **Language:** Java  
-**Runtime:** 150 ms (beats 5.24%)  
-**Memory:** 64.7 MB (beats 10.92%)  
-**Submitted:** 2026-10-23T06:07:04.273Z  
+**Runtime:** 141 ms (beats 6.11%)  
+**Memory:** 65.2 MB (beats 5.68%)  
+**Submitted:** 2026-10-23T06:29:22.598Z  
 
 ```java
 class Pair{
@@ -89,7 +89,14 @@ class Solution {
             String sender = e.getKey();
             int msgCount = e.getValue();
             Pair pair = new Pair(msgCount, sender);
-            maxHeap.add(pair);
+            if(maxHeap.isEmpty() || maxHeap.peek().count == msgCount){
+                maxHeap.add(pair);
+                continue;
+            }
+            if(maxHeap.peek().count < msgCount){
+                maxHeap.poll();
+                maxHeap.add(pair);
+            }
         }
         return maxHeap.peek().name;
     }
