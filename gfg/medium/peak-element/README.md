@@ -30,7 +30,7 @@ Explanation: Element 20 at index 1 is a peak since 10 < 20 > 15. Index 5 (value 
 **Language:** Java  
 **Runtime:** N/A  
 **Memory:** N/A  
-**Submitted:** 2026-10-24T17:15:55.133Z  
+**Submitted:** 2026-10-24T18:16:32.661Z  
 
 ```java
 class Solution {
@@ -38,7 +38,6 @@ class Solution {
         // code here
         int n = arr.length - 1;
         int res = -1;
-        int neg = Integer.MIN_VALUE;
         for(int i = 1; i < arr.length - 1; i++){
             if(arr[i - 1] < arr[i] && arr[i] > arr[i + 1]){
                 res = i;
