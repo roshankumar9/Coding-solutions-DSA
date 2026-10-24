@@ -3,7 +3,6 @@ class Solution {
         // code here
         int n = arr.length - 1;
         int res = -1;
-        int neg = Integer.MIN_VALUE;
         for(int i = 1; i < arr.length - 1; i++){
             if(arr[i - 1] < arr[i] && arr[i] > arr[i + 1]){
                 res = i;
