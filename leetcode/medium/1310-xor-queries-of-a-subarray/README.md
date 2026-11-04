@@ -55,24 +55,34 @@ Output: [8,0,4,4]
 ## Solution
 
 **Language:** Java  
-**Runtime:** 2667 ms (beats 5.14%)  
-**Memory:** 98.4 MB (beats 18.38%)  
-**Submitted:** 2026-11-04T16:12:53.228Z  
+**Runtime:** 3 ms (beats 47.82%)  
+**Memory:** 92.4 MB (beats 82.23%)  
+**Submitted:** 2026-11-04T16:15:23.057Z  
 
 ```java
 class Solution {
-    public int[] xorQueries(int[] arr, int[][] q) {
-        int res[] = new int[q.length];
-        for(int i = 0; i < q.length; i++){
-            int start = q[i][0];
-            int end = q[i][1];
-            int val = 0;
-            for(int j = start; j <= end; j++){
-                val ^= arr[j];
-            }
-            res[i] = val;
+    public int[] xorQueries(int[] arr, int[][] queries) {
+        int n = arr.length;
+
+        int[] prefix = new int[n + 1];
+
+        // Build Prefix XOR
+        for (int i = 0; i < n; i++) {
+            prefix[i + 1] = prefix[i] ^ arr[i];
         }
-        return res;
+
+        // Answer Queries
+        int[] result = new int[queries.length];
+
+        for (int i = 0; i < queries.length; i++) {
+
+            int left = queries[i][0];
+            int right = queries[i][1];
+
+            result[i] = prefix[right + 1] ^ prefix[left];
+        }
+
+        return result;
     }
 }
 ```
